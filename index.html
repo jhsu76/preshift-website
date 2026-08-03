@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Shift — Everything worth doing is worth being well prepared for.</title>
+<meta name="description" content="A weekly letter for people who lead in service and hospitality — and anyone else who leads people, anywhere.">
+<style>
+  :root {
+    --deep-earth: #2C2A1E;
+    --warm-linen: #F5F0E8;
+    --field-stone: #A89E82;
+    --sage: #4A6741;
+    --dry-grass: #C4B89A;
+    --body-gray: #3A3A3A;
+    --max-width: 760px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--warm-linen);
+    color: var(--body-gray);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; }
+
+  :focus-visible {
+    outline: 2px solid var(--sage);
+    outline-offset: 3px;
+  }
+
+  .wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- NAV ---------- */
+  header {
+    padding: 32px 0 16px;
+  }
+
+  .nav-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .wordmark {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 22px;
+    color: var(--deep-earth);
+    text-decoration: none;
+    letter-spacing: 0.2px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--field-stone);
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    color: var(--deep-earth);
+    border-color: var(--dry-grass);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 64px 0 56px;
+  }
+
+  .eyebrow {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--field-stone);
+    margin: 0 0 18px;
+  }
+
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--deep-earth);
+    font-size: clamp(32px, 5.5vw, 48px);
+    line-height: 1.25;
+    margin: 0 0 24px;
+    max-width: 14ch;
+  }
+
+  .mission {
+    font-size: 18px;
+    color: var(--body-gray);
+    max-width: 56ch;
+    margin: 0 0 36px;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 14px 26px;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 700;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+
+  .btn:hover, .btn:focus-visible { transform: translateY(-1px); }
+
+  .btn-primary {
+    background: var(--deep-earth);
+    color: var(--warm-linen);
+  }
+
+  .btn-primary:hover, .btn-primary:focus-visible { opacity: 0.9; }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--deep-earth);
+    border: 1px solid var(--deep-earth);
+  }
+
+  .btn-secondary:hover, .btn-secondary:focus-visible { background: rgba(44,42,30,0.06); }
+
+  /* ---------- DIVIDER ---------- */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--dry-grass);
+    max-width: 160px;
+    margin: 0 auto;
+  }
+
+  /* ---------- HOW IT WORKS ---------- */
+  .channels {
+    padding: 56px 0;
+  }
+
+  .label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--field-stone);
+    margin: 0 0 32px;
+    text-align: center;
+  }
+
+  .channel-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .channel h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    color: var(--deep-earth);
+    font-size: 20px;
+    margin: 0 0 10px;
+  }
+
+  .channel p {
+    font-size: 15px;
+    margin: 0;
+    color: var(--body-gray);
+  }
+
+  @media (max-width: 560px) {
+    .channel-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
+
+  /* ---------- WORK WITH ME ---------- */
+  .work {
+    padding: 56px 0 64px;
+    text-align: center;
+  }
+
+  .work-inner {
+    max-width: 52ch;
+    margin: 0 auto;
+  }
+
+  .work h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-style: italic;
+    font-weight: bold;
+    color: var(--deep-earth);
+    font-size: 26px;
+    margin: 0 0 16px;
+  }
+
+  .work p {
+    font-size: 16px;
+    margin: 0 0 28px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    border-top: 1px solid var(--dry-grass);
+    padding: 28px 0 40px;
+  }
+
+  .footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--field-stone);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .footer-links a {
+    text-decoration: none;
+    color: var(--field-stone);
+  }
+
+  .footer-links a:hover, .footer-links a:focus-visible {
+    color: var(--deep-earth);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="nav-row">
+    <a class="wordmark" href="#top">Pre-Shift</a>
+    <nav class="nav-links">
+      <a href="https://thepreshiftletter.substack.com" target="_blank" rel="noopener">The Letter</a>
+      <a href="#work">Work with Me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" id="top">
+    <p class="eyebrow">The Pre-Shift Letter</p>
+    <h1>Everything worth doing is worth being well prepared for.</h1>
+    <p class="mission">Pre-Shift exists to get you ready: for the conversation, the pressure, the moments no one sees coming. Not through hacks or shortcuts. Through the quiet work done when no one is watching, that decides who you are when it finally counts.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://thepreshiftletter.substack.com" target="_blank" rel="noopener">Read the Letter</a>
+      <a class="btn btn-secondary" href="https://instagram.com/preshiftletter" target="_blank" rel="noopener">Follow Daily</a>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="channels wrap">
+    <p class="label">How This Works</p>
+    <div class="channel-grid">
+      <div class="channel">
+        <h3>The Daily</h3>
+        <p>A few minutes of your time. One insight a day, Monday through Friday, tied to the week's theme.</p>
+      </div>
+      <div class="channel">
+        <h3>The Letter</h3>
+        <p>700 to 900 words, every Friday. One idea, explored properly. One thing to try.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section class="work wrap" id="work">
+    <div class="work-inner">
+      <h2>Work with me</h2>
+      <p>Got a quick question? Email me. I'm glad to answer.</p>
+      <p>Need more than that: consulting, or private mentorship and coaching for you or your team, that's work I take on directly. Reach out and we'll figure out what fits.</p>
+      <a class="btn btn-primary" href="mailto:joe@thepreshiftletter.com">Get in Touch</a>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="footer-row">
+    <span>&copy; Pre-Shift</span>
+    <div class="footer-links">
+      <a href="https://thepreshiftletter.substack.com" target="_blank" rel="noopener">Substack</a>
+      <a href="https://instagram.com/preshiftletter" target="_blank" rel="noopener">Instagram</a>
+      <a href="mailto:joe@thepreshiftletter.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
